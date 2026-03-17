@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #f9f9f9;
+            --bg: #f4f4f4;
             --text: #1a1a1a;
-            --accent: #4285F4; /* Google Blue */
-            --squoval-radius: 40px;
+            --accent: #4285F4; 
+            --squoval-radius: 48px;
         }
 
         body {
@@ -26,97 +26,123 @@
         }
 
         header {
-            padding: 80px 20px;
+            padding: 100px 20px 60px 20px;
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
         }
 
-        h1 { font-weight: 500; letter-spacing: -1px; }
+        h1 { font-weight: 500; font-size: 2.2rem; letter-spacing: -1px; margin-bottom: 24px; }
+        .intro-p { font-size: 1.1rem; color: #555; }
 
         .container {
             width: 90%;
-            max-width: 500px;
+            max-width: 550px;
             display: flex;
             flex-direction: column;
-            gap: 40px;
-            padding-bottom: 100px;
+            gap: 60px;
+            padding-bottom: 120px;
         }
 
-        /* Squoval Sections */
+        /* Stacked Squoval Cards */
         .space-card {
             background: white;
-            padding: 40px;
+            padding: 50px 40px;
             border-radius: var(--squoval-radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
-        .space-card:hover { transform: translateY(-5px); }
-
-        .label {
+        .space-title {
+            font-size: 1.8rem;
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent);
-            display: block;
-            margin-bottom: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            color: var(--text);
         }
 
         .visual-placeholder {
             width: 100%;
-            aspect-ratio: 16/9;
-            background: #eee;
-            border-radius: 20px;
-            margin-bottom: 20px;
+            aspect-ratio: 4/3;
+            background: #f0f0f0;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
         }
 
-        img { width: 100%; height: 100%; object-fit: cover; }
+        .visual-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-text {
+            font-size: 1rem;
+            color: #444;
+            max-width: 100%;
+        }
 
         footer {
-            padding: 40px;
-            font-size: 0.8rem;
-            opacity: 0.6;
+            padding: 60px;
+            font-size: 0.85rem;
+            color: #888;
             text-align: center;
+            max-width: 500px;
         }
 
-        a { color: var(--accent); text-decoration: none; }
+        /* For the YouTube Embed */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Three Spaces Where My Creativity Lives</h1>
-    <p>My creativity emerges in three places: on set, behind the decks, and around a table. Each space invites a different kind of storytelling—through visuals, sound, or food—but all share the same intention: bringing people together.</p>
+    <p class="intro-p">My creativity tends to emerge in three places: on set, behind the decks, and around a table. Each space invites a different kind of storytelling—through visuals, sound, or food—but all share the same intention: bringing people together through thoughtful, produced experiences.</p>
 </header>
 
 <div class="container">
+    
     <section class="space-card">
-        <span class="label">Set</span>
+        <h2 class="space-title">Set</h2>
         <div class="visual-placeholder">
-            <img src="your-image-here.jpg" alt="Production Set">
+            <img src="your-production-image.jpg" alt="Culinary Production Set">
         </div>
-        <p>Working as a model introduced me to the world of creative production. Being on set meant translating a brand’s vision into visual storytelling. That curiosity led me to pursue production work, where I now support creative teams in bringing ideas from concept to execution.</p>
+        <div class="content-text">
+            <p>While modeling introduced me to the creative vision, production taught me how to build it. My work as a Production Assistant in the culinary and design space is a study in the "invisible labor" of beauty. From the logistical rigour of load-ins to the delicate styling of beautifully adorned tablescapes, I’ve learned that a truly immersive experience is a choreography of aesthetics and organization. I don’t just see a set; I see an ecosystem where ideas move from brief to reality through intentional design.</p>
+        </div>
     </section>
 
     <section class="space-card">
-        <span class="label">Sound</span>
+        <h2 class="space-title">Sound</h2>
         <div class="visual-placeholder">
-            <p>Mix Embed Placeholder</p>
+            <p style="color:#aaa;"><iframe width="560" height="315" src="https://www.youtube.com/embed/p_V-YNqBepA?si=-VenYyErAOoEABKB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
         </div>
-        <p>As a DJ, I think about sound as a narrative. I’m currently exploring the influence of Black Britons within UK music genres, using rhythm to bridge cultural gaps and move energy through a room.</p>
+        <div class="content-text">
+            <p>Music is how I process and share culture. As a DJ, I treat sound as a narrative—mapping how energy moves through a room and how one track can bridge cultural gaps. I am currently exploring the profound influence of Black Britons within UK music genres, using rhythm to tell stories that resonate both locally and globally.</p>
+        </div>
     </section>
 
     <section class="space-card">
-        <span class="label">Table</span>
+        <h2 class="space-title">Table</h2>
         <div class="visual-placeholder">
-            <img src="table-spread.jpg" alt="Dinner Party Spread">
+            <img src="table-scans.jpg" alt="Party Prep and Tablescape">
         </div>
-        <p>The table is where food, music, and conversation intersect. I approach hosting like production—curating the menu, atmosphere, and rhythm of the evening to create a meaningful community experience.</p>
+        <div class="content-text">
+            <p>The table is where creativity takes its most tangible form. Whether designing a dinner or experimenting with recipes, I approach hosting as a production. Using prep-lists as scripts and ingredients as visuals, I curate moments where food, music, and conversation intersect to build community. It is the ultimate space for sensory storytelling.</p>
+        </div>
     </section>
+
 </div>
 
 <footer>
