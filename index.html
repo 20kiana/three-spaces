@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Spaces | Creative Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --text: #1a1a1a;
+            --accent: #4285F4; /* Google Blue */
+            --squoval-radius: 40px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        h1 { font-weight: 500; letter-spacing: -1px; }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 100px;
+        }
+
+        /* Squoval Sections */
+        .space-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--squoval-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .space-card:hover { transform: translateY(-5px); }
+
+        .label {
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .visual-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #eee;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        img { width: 100%; height: 100%; object-fit: cover; }
+
+        footer {
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            text-align: center;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Three Spaces Where My Creativity Lives</h1>
+    <p>My creativity emerges in three places: on set, behind the decks, and around a table. Each space invites a different kind of storytelling—through visuals, sound, or food—but all share the same intention: bringing people together.</p>
+</header>
+
+<div class="container">
+    <section class="space-card">
+        <span class="label">Set</span>
+        <div class="visual-placeholder">
+            <img src="your-image-here.jpg" alt="Production Set">
+        </div>
+        <p>Working as a model introduced me to the world of creative production. Being on set meant translating a brand’s vision into visual storytelling. That curiosity led me to pursue production work, where I now support creative teams in bringing ideas from concept to execution.</p>
+    </section>
+
+    <section class="space-card">
+        <span class="label">Sound</span>
+        <div class="visual-placeholder">
+            <p>Mix Embed Placeholder</p>
+        </div>
+        <p>As a DJ, I think about sound as a narrative. I’m currently exploring the influence of Black Britons within UK music genres, using rhythm to bridge cultural gaps and move energy through a room.</p>
+    </section>
+
+    <section class="space-card">
+        <span class="label">Table</span>
+        <div class="visual-placeholder">
+            <img src="table-spread.jpg" alt="Dinner Party Spread">
+        </div>
+        <p>The table is where food, music, and conversation intersect. I approach hosting like production—curating the menu, atmosphere, and rhythm of the evening to create a meaningful community experience.</p>
+    </section>
+</div>
+
+<footer>
+    This artifact was created using Google Gemini to explore how AI can support creative ideation, storytelling, and simple web prototyping.
+</footer>
+
+</body>
+</html>
