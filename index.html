@@ -7,112 +7,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-    :root {
-        --bg: #ffffff;
-        --text: #1a1a1a;
-        --light-grey: #f2f2f2;
-        --squoval-radius: 60px; /* More rounded for that 'cute' squoval look */
-    }
+        :root {
+            --bg: #f9f9f9;
+            --text: #1a1a1a;
+            --accent: #4285F4; 
+            --squoval-radius: 40px; /* Reverted to your original squoval */
+        }
 
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: var(--bg);
-        color: var(--text);
-        line-height: 1.8;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center; /* Centers all text globally */
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* This centers all text */
+        }
 
-    header {
-        padding: 120px 24px 80px 24px;
-        max-width: 600px;
-    }
+        header {
+            padding: 80px 20px;
+            max-width: 600px;
+        }
 
-    h1 { 
-        font-family: 'Playfair Display', serif;
-        font-weight: 600;
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        line-height: 1.2;
-    }
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 600; 
+            font-size: 2.2rem;
+            letter-spacing: -0.5px; 
+            margin-bottom: 20px;
+        }
 
-    .intro-p { 
-        font-size: 1rem; 
-        color: #666; 
-        font-style: italic;
-        font-family: 'Playfair Display', serif;
-    }
+        .intro-p { font-size: 1rem; color: #555; }
 
-    .container {
-        width: 90%;
-        max-width: 500px;
-        display: flex;
-        flex-direction: column;
-        gap: 80px;
-        padding-bottom: 150px;
-    }
+        .container {
+            width: 95%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 100px;
+        }
 
-    .space-card {
-        background: var(--bg);
-        /* Removing the box shadow for a flatter, high-fashion look */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        .space-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--squoval-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .space-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 2rem;
-        font-weight: 400;
-        margin-bottom: 30px;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-        width: fit-content;
-    }
+        .space-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            color: var(--text);
+        }
 
-    .visual-placeholder {
-        width: 100%;
-        /* Adjusted for the portrait dimension you liked (2514x3467) */
-        aspect-ratio: 2.5 / 3.4; 
-        background: var(--light-grey);
-        border-radius: var(--squoval-radius);
-        margin-bottom: 30px;
-        overflow: hidden;
-        border: 1px solid #eee; /* Subtle border */
-    }
+        .visual-placeholder {
+            width: 100%;
+            /* This preserves the portrait orientation you requested */
+            aspect-ratio: 2514 / 3467; 
+            background: #eee;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .visual-placeholder img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+        img { width: 100%; height: 100%; object-fit: cover; }
 
-    .content-text {
-        font-size: 0.95rem;
-        color: #333;
-        max-width: 400px; /* Keeps text from getting too wide/unreadable */
-    }
+        .content-text {
+            font-size: 1rem;
+            color: #444;
+        }
 
-    .ai-caption {
-        font-size: 0.7rem;
-        color: #999;
-        margin-top: 10px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+        /* Disclosure styling */
+        .ai-note {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 10px;
+            font-style: italic;
+        }
 
-    footer {
-        padding: 80px 40px;
-        font-size: 0.8rem;
-        color: #bbb;
-        border-top: 1px solid #f9f9f9;
-        width: 100%;
-    }
-</style>
+        footer {
+            padding: 60px 40px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            max-width: 400px;
+        }
+    </style>
 </head>
 <body>
 
