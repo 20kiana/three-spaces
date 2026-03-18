@@ -91,6 +91,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            aspect-ratio: 16 / 9; /* for video */
         }
 
         .visual-placeholder img,
@@ -155,8 +156,12 @@
     <section class="space-card">
         <h2 class="space-title">Sound</h2>
         <div class="visual-placeholder">
-            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/p_V-YNqBepA?si=K36vKuyZtTr96lmF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-        </div>
+           <iframe 
+             src="https://www.youtube.com/embed/p_V-YNqBepA"
+             title="YouTube video player"
+             allowfullscreen>
+           </iframe>
+<       </div>
         <div class="content-text">
             <p>Music is how I process and share culture. As a DJ, I treat sound as a narrative—mapping how energy moves through a room and how one track can bridge cultural gaps. I am currently exploring the profound influence of Black Britons within UK music genres, using rhythm to tell stories that resonate both locally and globally.</p>
         </div>
