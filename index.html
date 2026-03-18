@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three Spaces | Creative Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
         :root {
             --bg: #f9f9f9;
             --text: #1a1a1a;
-            --accent: #4285F4; 
-            --squoval-radius: 40px; /* Reverted to your original squoval */
+            --squoval-radius: 40px; 
         }
 
         body {
@@ -24,7 +23,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center; /* This centers all text */
+            text-align: center;
         }
 
         header {
@@ -51,6 +50,7 @@
             padding-bottom: 100px;
         }
 
+        /* The Hover Movement Section */
         .space-card {
             background: white;
             padding: 40px;
@@ -59,23 +59,35 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            
+            /* This makes the movement smooth */
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            cursor: default;
         }
 
+        /* Re-adding the Hover Lift */
+        .space-card:hover {
+            transform: translateY(-8px); /* Lifts the card up */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Deepens shadow on hover */
+        }
+
+        /* Bold & Padded Titles */
         .space-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            font-weight: 500;
-            margin-bottom: 25px;
+            font-weight: 700; /* Bolder weight */
+            margin-top: 0;
+            margin-bottom: 40px; /* Added padding under the title */
             color: var(--text);
+            letter-spacing: 1px;
         }
 
         .visual-placeholder {
             width: 100%;
-            /* This preserves the portrait orientation you requested */
             aspect-ratio: 2514 / 3467; 
             background: #eee;
             border-radius: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -89,11 +101,10 @@
             color: #444;
         }
 
-        /* Disclosure styling */
         .ai-note {
             font-size: 0.75rem;
             color: #999;
-            margin-top: 10px;
+            margin-top: 15px;
             font-style: italic;
         }
 
@@ -109,34 +120,42 @@
 
 <header>
     <h1>Three Spaces Where My Creativity Lives</h1>
-    <p>My creativity emerges in three places: on set, behind the decks, and around a table. Each space invites a different kind of storytelling—through visuals, sound, or food—but all share the same intention: bringing people together.</p>
+    <p class="intro-p">My creativity tends to emerge in three places: on set, behind the decks, and around a table. Each space invites a different kind of storytelling—through visuals, sound, or food—but all share the same intention: bringing people together through thoughtful experiences.</p>
 </header>
 
 <div class="container">
+    
     <section class="space-card">
-        <span class="label">Set</span>
+        <h2 class="space-title">Set</h2>
         <div class="visual-placeholder">
-            <img src="Gemini_Generated_Inspired_Production_Pic.png" alt="Set visualisation">
+             <img src="set.png" alt="Set visualisation">
         </div>
-        <p class="ai-caption">Visual recreated using Google Gemini to enhance original low-res reference.</p>
-        <p>While modeling taught me how to live within a creative vision, production taught me how to build one. My work as a production assistant in the culinary and design space has been a study in the 'invisible labor' of beauty. From the heavy lifting of load-ins to the delicate placement of a tablescape, I’ve learned that a truly immersive experience is 10% execution and 90% choreography. I don't just see a set; I see a living ecosystem where logistics meet aesthetics.</p>
+        <div class="content-text">
+            <p>While modeling introduced me to the creative vision, production taught me how to build it. My work as a Production Assistant in the culinary and design space is a study in the "invisible labor" of beauty. From the logistical rigour of load-ins to the delicate styling of beautifully adorned tablescapes, I’ve learned that a truly immersive experience is a choreography of aesthetics and organization.</p>
+            <p class="ai-note">Visual recreated using Google Gemini to enhance original low-res reference.</p>
+        </div>
     </section>
 
     <section class="space-card">
-        <span class="label">Sound</span>
+        <h2 class="space-title">Sound</h2>
         <div class="visual-placeholder">
             <p><iframe width="560" height="315" src="https://www.youtube.com/embed/p_V-YNqBepA?si=K36vKuyZtTr96lmF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
         </div>
-        <p>As a DJ, I think about sound as a narrative. I’m currently exploring the influence of Black Britons within UK music genres, using rhythm to bridge cultural gaps and move energy through a room.</p>
+        <div class="content-text">
+            <p>Music is how I process and share culture. As a DJ, I treat sound as a narrative—mapping how energy moves through a room and how one track can bridge cultural gaps. I am currently exploring the profound influence of Black Britons within UK music genres, using rhythm to tell stories that resonate both locally and globally.</p>
+        </div>
     </section>
 
     <section class="space-card">
-        <span class="label">Table</span>
+        <h2 class="space-title">Table</h2>
         <div class="visual-placeholder">
-            <img src="kiana_journaljournal.jpg" alt="Dinner Party Spread">
+             <img src="table.jpg" alt="Dinner Party Spread">
         </div>
-        <p>The table is where food, music, and conversation intersect. I approach hosting like production—curating the menu, atmosphere, and rhythm of the evening to create a meaningful community experience.</p>
+        <div class="content-text">
+            <p>The table is where food, music, and conversation intersect. I approach hosting like production—using prep-lists as scripts and ingredients as visuals to curate meaningful community experiences. It is the ultimate space for sensory storytelling.</p>
+        </div>
     </section>
+
 </div>
 
 <footer>
