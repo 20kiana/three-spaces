@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
+            background-color: #f5f5f3;;
             color: var(--text);
             line-height: 1.6;
             margin: 0;
@@ -27,17 +27,23 @@
         }
 
         header {
-    padding: 100px 20px 60px;
+            padding: 100px 20px 60px;
+            max-width: 600px;
         }
 
-h1 {
-    font-size: 2.4rem;
-    line-height: 1.2;
+         h1 {
+            font-size: 2.4rem;
+            line-height: 1.2;
+            font-family: 'Playfair Display', serif; 
+            font-weight: 600; 
+            letter-spacing: -0.5px; 
+            margin-bottom: 20px;
         }
 
-.intro-p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+       .intro-p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            
         }
 
         .container {
@@ -45,40 +51,37 @@ h1 {
             max-width: 500px;
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 60px;
             padding-bottom: 100px;
         }
 
         /* The Hover Movement Section */
         .space-card {
-            background: white;
-            padding: 40px;
-            border-radius: var(--squoval-radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            /* This makes the movement smooth */
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-            cursor: default;
+             background: white;
+             padding: 50px 40px;
+             border-radius: 32px;
+             box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         /* Re-adding the Hover Lift */
         .space-card:hover {
-            transform: translateY(-8px); /* Lifts the card up */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Deepens shadow on hover */
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(0,0,0,0.08);
         }
 
         /* Bold & Padded Titles */
         .space-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700; /* Bolder weight */
             margin-top: 0;
             margin-bottom: 40px; /* Added padding under the title */
             color: var(--text);
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .visual-placeholder {
@@ -109,8 +112,9 @@ h1 {
         }
 
         .content-text {
-            font-size: 1rem;
-            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 480px;
         }
 
         .ai-note {
